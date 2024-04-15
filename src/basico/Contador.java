@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 public class Contador extends Application{
 
+	private int contador = 0;
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -21,7 +23,15 @@ public class Contador extends Application{
 		Label numero = new Label("0");
 		
 		Button botaoMenos = new Button("-");
+		botaoMenos.setOnAction(e ->{
+			contador--;
+			numero.setText(Integer.toString(contador));
+		});
 		Button botaoMais = new Button("+");
+		botaoMais.setOnAction(e -> {
+			contador++;
+			numero.setText(Integer.toString(contador));
+		});
 		
 		HBox boxBotoes = new HBox();
 		boxBotoes.setAlignment(Pos.CENTER);//Centrazila o box
