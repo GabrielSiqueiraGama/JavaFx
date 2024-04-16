@@ -1,0 +1,12 @@
+.conteudo {
+	-fx-background-color: rgb(0, 0, 0);
+}
+.titulo {
+	-fx-font-family: Montserrat;
+	-fx-text-fill: #48b2ee;
+	-fx-font-size: 28px;
+}
+.numero {
+	-fx-text-fill: #eee;
+	-fx-font-size: 28px;
+}

@@ -19,8 +19,12 @@ public class Contador extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		
 		Label titulo = new Label("Contador");//Label = titulo
+		titulo.getStyleClass().add("titulo");
+		
 		Label numero = new Label("0");
+		numero.getStyleClass().add("numero");
 		
 		Button botaoMenos = new Button("-");
 		botaoMenos.setOnAction(e ->{
@@ -39,15 +43,20 @@ public class Contador extends Application{
 		boxBotoes.getChildren().add(botaoMenos);
 		boxBotoes.getChildren().add(botaoMais);
 		
-		VBox boxPrincipal = new VBox(); // Cria caixa vertical
-		boxPrincipal.setAlignment(Pos.CENTER);
-		boxPrincipal.setSpacing(10);
-		boxPrincipal.getChildren().add(titulo); // Adiciona na caixa o titulo
-		boxPrincipal.getChildren().add(numero);
-		boxPrincipal.getChildren().add(boxBotoes);
+		VBox boxConteudo = new VBox(); // Cria caixa vertical
+		boxConteudo.getStyleClass().add("conteudo");//adiciona estilo ao box
+		boxConteudo.setAlignment(Pos.CENTER);
+		boxConteudo.setSpacing(10);
+		boxConteudo.getChildren().add(titulo); // Adiciona na caixa o titulo
+		boxConteudo.getChildren().add(numero);
+		boxConteudo.getChildren().add(boxBotoes);
 		
-		Scene cenaPrincipal = new Scene(boxPrincipal, 500, 500); //Cria uma cena colocando a caixa como cena
+		String caminhoCss = getClass()
+				.getResource("/basico/contador.css").toExternalForm();//importa o css da classe selecionada
 		
+		Scene cenaPrincipal = new Scene(boxConteudo, 500, 500); //Cria uma cena colocando a caixa como cena
+		cenaPrincipal.getStylesheets().add(caminhoCss);//relaciona o css com a classe
+		cenaPrincipal.getStylesheets().add("https://fonts.googleapis.com/css?family=Montserrat");//importa fonte de texto
 		primaryStage.setScene(cenaPrincipal);//Seta a cena para ser exibida
 		primaryStage.show();//Exibe todas as cenas já selecionadas
 	}
