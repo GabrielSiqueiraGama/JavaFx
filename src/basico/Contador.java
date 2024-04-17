@@ -69,7 +69,7 @@ public class Contador extends Application{
 		boxConteudo.getChildren().add(boxBotoes);
 		
 		String caminhoCss = getClass()
-				.getResource("/basico/contador.css").toExternalForm();//importa o css da classe selecionada
+				.getResource("/basico/Contador.css").toExternalForm();//importa o css da classe selecionada
 		
 		Scene cenaPrincipal = new Scene(boxConteudo, 500, 500); //Cria uma cena colocando a caixa como cena
 		cenaPrincipal.getStylesheets().add(caminhoCss);//relaciona o css com a classe
