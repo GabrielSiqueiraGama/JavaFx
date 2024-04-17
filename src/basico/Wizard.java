@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-
+//Estudando navegação de paginas/cenas
 public class Wizard extends Application{
 
 	private Stage janela;

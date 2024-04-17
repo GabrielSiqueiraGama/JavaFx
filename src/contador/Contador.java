@@ -1,4 +1,4 @@
-package basico;
+package contador;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -69,12 +69,13 @@ public class Contador extends Application{
 		boxConteudo.getChildren().add(boxBotoes);
 		
 		String caminhoCss = getClass()
-				.getResource("/basico/Contador.css").toExternalForm();//importa o css da classe selecionada
+				.getResource("/contador/Contador.css").toExternalForm();//importa o css da classe selecionada
 		
 		Scene cenaPrincipal = new Scene(boxConteudo, 500, 500); //Cria uma cena colocando a caixa como cena
 		cenaPrincipal.getStylesheets().add(caminhoCss);//relaciona o css com a classe
 		cenaPrincipal.getStylesheets().add("https://fonts.googleapis.com/css?family=Montserrat");//importa fonte de texto
 		primaryStage.setScene(cenaPrincipal);//Seta a cena para ser exibida
 		primaryStage.show();//Exibe todas as cenas já selecionadas
+		primaryStage.setTitle("Contador");//Define o titulo
 	}
 }
