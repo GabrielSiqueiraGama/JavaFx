@@ -23,6 +23,7 @@ public class AppLayout extends Application{
 		raiz = new TesteAnchorPane();
 		raiz = new TesteBorderPane();
 		raiz = new TesteFlowPane();
+		raiz = new TesteGrid();
 		Scene principal = new Scene(raiz, 800, 600);
 		janela = primaryStage;
 		janela.setTitle("Gerenciadores de Layout");
