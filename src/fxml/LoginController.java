@@ -1,6 +1,9 @@
 package fxml;
 
+import org.controlsfx.control.Notifications;
+
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -15,7 +18,9 @@ public class LoginController {
 		boolean senhaValida = senhaField.getText().equals("xyz-321");
 
 		if(emailValido & senhaValida) {
-			System.out.println("Aoooo trem bao");
+			Notifications.create().position(Pos.CENTER).title("Login FXML").text("Sucesso ao logar").showConfirm();
+		}else {
+			Notifications.create().position(Pos.CENTER).title("Login FXML").text("Usuario ou senha invalidos").showError();;
 		}
 	}
 }
